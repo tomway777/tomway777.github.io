@@ -283,7 +283,7 @@
             .style("visibility", "hidden")
             .text("a simple tooltip");
       
-          d3.csv("data/data.csv", function(error, csv) {
+          d3.csv("/data/data.csv", function(error, csv) {
             var data = d3.nest()
               .key(function(d) { return d.dropoff_datetime; })
               .rollup(function(d) { return d[0].id; })
